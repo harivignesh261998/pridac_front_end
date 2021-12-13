@@ -1,0 +1,12 @@
+
+
+@font-face{
+    font-family:"Tw Cen MT";
+    src: url(./assets/fonts/TCCB____.TTF);
+
+}
+body{
+    font-family: 'Tw Cen MT';
+    overflow-x: hidden;
+    
+}

@@ -1,0 +1,21 @@
+    <div class="ng-autocomplete center" style="margin-top:10px">
+        <ng-autocomplete 
+          [data]="data"
+          [searchKeyword]="keyword"
+          placeHolder="Search for the categories..."
+          (selected)='selectEvent($event)'
+          (inputChanged)='onChangeSearch($event)'
+          (inputFocused)='onFocused($event)'
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate" >                                 
+        </ng-autocomplete>
+         
+        <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+        </ng-template>
+         
+        <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+        </ng-template>
+        
+        </div>

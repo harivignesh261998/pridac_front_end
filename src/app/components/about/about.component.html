@@ -1,0 +1,22 @@
+<section class="team">
+    <div class="container">
+        <h1>OUR TEAM</h1>
+        <div class="row">
+            <div class="col-md-3 profile text-center" *ngFor='let pic of profile_pic_.members'>
+                    <div class="img-box">
+                        <img src="{{pic.profile_pic}}" alt="" class="img-responsive">
+                        <ul>
+                           <a href="#"> <li><i class="fab fa-facebook-f"></i></li></a>
+                           <a href="#"> <li><i class="fab fa-twitter"></i></li></a>
+                           <a href="#"> <li><i class="fab fa-linkedin"></i></li></a>
+    
+                        </ul>
+                    </div>
+                    <h2>{{pic.first_name}}</h2>
+                    <h3>{{pic.position}}</h3>
+                
+            </div>
+        </div>
+
+    </div>
+</section>

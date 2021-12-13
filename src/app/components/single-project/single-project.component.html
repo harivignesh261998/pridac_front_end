@@ -1,0 +1,58 @@
+
+   
+        <div class="row" style="margin: 60px;">
+            <div class="col-md-8">
+                <img id="featured" src="{{imgSrc}}" alt="">
+                <div id="slide-wraper">
+                    
+                        <!-- <img id="slideLeft" class="arrow" src="../../../assets/images/New folder/arrow-left.png"> -->
+                    
+                    <div id="slider">
+                        <img src="{{image}}" alt="" class="thumbnail active" *ngFor='let image of selectedProject.images;let i=index' (click)='changeImage(i)'>
+                    </div>
+                    
+                        <!-- <img id="slideRight" class="arrow" src="../../../assets/images/New folder/arrow-right.png"> -->
+                        
+                    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5><b>Project Information</b></h5>
+                <div style="width:250px;">
+        
+                    <table class="table m-b-60">
+                        <tr>
+                            <td> <span style="font-size:14px;">Construction Date :</span><span style="font-size: 14px;"> <b>{{month}} {{date}}</b></span></td>
+                        </tr>
+                        <tr>
+                            <td> <span style="font-size: 14px;">Location : </span> <span style="font-size: 14px;" ><b>{{selectedProject.location}}</b></span></td>
+                        </tr>
+                        <tr>
+                            <td> <span style="font-size: 14px;">Value : </span> <span style="font-size: 14px;"><b>&#8377; 270.000</b></span></td>
+                        </tr>
+                        <tr>
+                            <td> <span style="font-size: 14px;">Sq.Ft : </span> <span style="font-size: 14px;"><b>{{selectedProject.value}}</b></span></td>
+                        </tr>
+                        <tr>
+                            <td><span style="font-size: 14px;">Category : </span> <span style="font-size: 14px;"><b>{{selectedProject.category}}</b></span></td>
+                        </tr>
+                        <tr>
+                            <td><span style="font-size: 14px;">Firm : </span> <span style="font-size: 14px;"> <b>{{selectedProject.name}}</b></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+               
+            </div>
+        </div>
+
+        <div class="row" style="margin: 60px;">
+            <div class="project_details">
+                <h3>Project description</h3>
+                {{selectedProject.description}}
+            </div>
+
+        </div>
+    
+
+
